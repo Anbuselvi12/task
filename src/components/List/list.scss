@@ -1,0 +1,21 @@
+.list-cards {
+  width: 300px;
+  margin-right: 0.5rem;
+  border: 1px solid #ebecf0;
+  background: #fff;
+  margin-right: 20px;
+
+  .title-list {
+    border-bottom: 2px solid #49affd;
+  }
+
+  .container-cards {
+    overflow-x: auto;
+    max-height: calc(100vh - 240px);
+    padding: 1rem;
+  }
+
+  .card-container {
+    overflow-y: hidden;
+  }
+}

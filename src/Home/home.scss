@@ -1,0 +1,24 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  overflow-y: auto;
+}
+.search-container {
+  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.search {
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 15px;
+  &::placeholder {
+    color: #aaaaaa;
+  }
+}

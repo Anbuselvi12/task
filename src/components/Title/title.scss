@@ -1,0 +1,11 @@
+.title {
+  background: #fff;
+  padding: 8px 10px;
+  &:hover {
+    background: rgba(73, 175, 253, 0.04);
+    color: #0a8bef;
+  }
+  &__heading {
+    font-size: 18px;
+  }
+}
