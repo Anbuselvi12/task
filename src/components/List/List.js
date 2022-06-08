@@ -7,20 +7,20 @@ import "./list.scss";
 export default function List({ list, index }) {
   return (
     <Draggable draggableId={list.id} index={index}>
-      {(provided) => (
-        <div {...provided.draggableProps} ref={provided.innerRef}>
-          <div className="list-cards" {...provided.dragHandleProps}>
+      {(groupProvided) => (
+        <div {...groupProvided.draggableProps} ref={groupProvided.innerRef}>
+          <div className="list-cards" {...groupProvided.dragHandleProps}>
             <div className="title-list">
               <Title title={list.title} listId={list.id} />
             </div>
             <div className="container-cards">
               <Droppable droppableId={list.id} type="task">
-                {(provided) => (
-                  <div ref={provided.innerRef} {...provided.droppableProps} className="card-container">
-                    {list.cards.map((card, index) => (
-                      <Card key={card.id} card={card} index={index} listId={list.id} />
+                {(childProvided) => (
+                  <div ref={childProvided.innerRef} {...childProvided.droppableProps} className="card-container">
+                    {list.cards.map((card, cardIndex) => (
+                      <Card key={card.id} card={card} index={cardIndex} listId={list.id} />
                     ))}
-                    {provided.placeholder}
+                    {childProvided.placeholder}
                   </div>
                 )}
               </Droppable>
