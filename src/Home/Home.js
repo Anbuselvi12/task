@@ -160,13 +160,13 @@ export default function Home() {
   };
 
   const FilteredData = (list) => {
-    let data = JSON.parse(JSON.stringify(list));
+    let searchData = JSON.parse(JSON.stringify(list));
     if (query !== "" && list.cards) {
-      data.cards = list.cards.filter((e) => {
+      searchData.cards = list.cards.filter((e) => {
         return e.title.toLowerCase().includes(query.toLocaleLowerCase());
       });
     }
-    return data;
+    return searchData;
   };
 
   return (
